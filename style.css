@@ -1,0 +1,123 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container.financeiro {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* O Resumo com cara de Dashboard */
+.resumo-geral {
+    display: flex;
+    justify-content: space-around;
+    background: #1f2937; /* Cor escura moderna */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    color: white;
+    text-align: center;
+}
+
+.resumo-item span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.resumo-item strong {
+    font-size: 1.1rem;
+}
+
+/* Inputs e Botão */
+.add-gasto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #f9fafb;
+    input {
+    /* ... seu código atual ... */
+    font-size: 16px; /* Tamanho mínimo para o navegador não dar zoom no mobile */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do campo */
+}
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* Cards de Contrato */
+.contrato-card {
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.progresso-bg {
+    background: #e5e7eb;
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progresso-barra {
+    background: #10b981;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduz o respiro lateral do corpo */
+    }
+
+    .container.financeiro {
+        padding: 20px; /* Deixa o card principal mais compacto */
+        border-radius: 15px;
+    }
+
+    .resumo-geral {
+        flex-direction: column; /* Empilha os valores em vez de deixar lado a lado */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .resumo-item strong {
+        font-size: 1.3rem; /* Aumenta um pouco o número para facilitar a leitura */
+    }
+}

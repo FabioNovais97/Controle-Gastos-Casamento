@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Gastos</title>
+    
+    <link rel="apple-touch-icon" href="icon-gastos.png">
+    <meta name="apple-mobile-web-app-title" content="Gastos Casamento">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="container financeiro">
+        <h2>💰 Gestão de Gastos</h2>
+
+        <div class="resumo-geral">
+            <div class="resumo-item">
+                <span>Total Pago</span>
+                <strong id="totalGeralPago">R$ 0,00</strong>
+            </div>
+            <div class="resumo-item">
+                <span>A Pagar</span>
+                <strong id="totalGeralFalta">R$ 0,00</strong>
+            </div>
+        </div>
+
+        <div class="add-gasto">
+            <input type="text" id="contratoNome" placeholder="Ex: Buffet">
+            <input type="number" id="contratoTotal" placeholder="Valor Total (Ex: 18000)">
+            <button onclick="addNovoContrato()">Cadastrar Contrato</button>
+        </div>
+
+        <div id="listaContratos"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
